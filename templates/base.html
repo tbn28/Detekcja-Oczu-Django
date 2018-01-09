@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="utf-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>{% block title %}Oczy{% endblock %}</title>
+
+	<link rel="shortcut icon" type="image/x-icon" href="static/favicon2.ico">
+
+	<link rel="stylesheet" href="static/css/bootstrap.min.css">
+	<link rel="stylesheet" href="static/css/style.css">
+
+	{% block stylesheets %}{% endblock %}
+</head>
+<body>
+
+	<header>
+		<div class="sub-header">
+			<a href="/"><h1>System detekcji oczu</h1></a>
+		</div>
+	</header>
+
+	<div class="content">
+		{% block content %}{% endblock %}
+	</div>
+
+	<footer>
+		<div class="sub-footer">
+			<span>&copy;</span>
+			<span>tbn28</span>
+		</div>
+	</footer>
+
+    <script src="static/js/jquery-2.1.1.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+
+  	{% block scripts %}{% endblock %}
+
+</body>
+</html>

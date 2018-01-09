@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Wykrywanie oczu{% endblock %}
+
+{% block content %}
+
+<h2>Sprawdzenie wykazało...</h2>
+
+<div>
+{% if success %}
+    <p>Obrazek wczytany poprawnie.</p>
+
+    <div style="display: inline-block;">
+        <img class="img-responsive" src="{{ image2 }}">
+    </div>
+{% else %}
+    <p>{{ error_msg }}</p>
+{% endif %}
+</div>
+
+<br>
+
+<div>
+    <a class="btn btn-default" href="/">Powrót</a>
+</div>
+
+{% endblock %}
